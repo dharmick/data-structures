@@ -58,12 +58,7 @@ class avl{
                 }
             }
 
-            int l_height = 0;
-            if(root->left) l_height = root->left->height;
-            int r_height = 0;
-            if(root->right) r_height = root->right->height;
-
-            root->height = max(l_height, r_height) + 1;
+            root->height = find_max(root->left, root->right) + 1;
             return root;
 
         }
